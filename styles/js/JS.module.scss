@@ -1,0 +1,137 @@
+@import "../colors/Colors.scss";
+@import "../fonts/Fonts.scss";
+@import "../mixins/Mixins.scss";
+
+//! Non Responsive
+//? White Overlay
+.white_overlay {
+  position: fixed;
+  width: 100%;
+  height: 110%;
+  background-color: white;
+  z-index: 999;
+}
+
+//? Page Loader
+.page_loader {
+  position: fixed;
+  width: 100%;
+  height: 110%;
+  display: none;
+  place-items: center;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: white;
+
+  .page_loader_cnt {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    h1 {
+      font-family: $P;
+      font-weight: $Headings;
+      text-transform: uppercase;
+      color: $Calypso;
+      font-size: clamp(3rem, 4vw, 4rem);
+      padding-bottom: 30px !important;
+    }
+
+    .page_loader_spinner_holder {
+      text-align: center;
+
+      div {
+        @include qC;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 9px solid rgba(0, 0, 255, 0.089);
+        animation: spinner 1.2s linear infinite;
+
+        span {
+          width: 10px;
+          height: 10px;
+          border-radius: 20%;
+          transform: rotate(45deg);
+          background-color: $BlueDianne;
+          display: block;
+        }
+
+        @keyframes spinner {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+//? Back To Top
+.back_to_top {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  @include tLC;
+  bottom: 30px;
+  right: 30px;
+  z-index: 200;
+  background-color: $EasternBlue;
+  color: white;
+  border-radius: 50%;
+  border: 1px solid rgba(245, 245, 245, 0.212);
+  outline: none;
+  font-size: 25px;
+
+  &:hover {
+    background-color: $Calypso;
+  }
+}
+
+//! Responsive
+@media all and (max-width: 1995px) {
+  //? Back To Top
+  .back_to_top {
+    font-size: 20px;
+    width: 45px;
+    height: 45px;
+    right: 17px;
+  }
+}
+
+@media all and (max-width: 991px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media all and (max-width: 768px) {
+}
+
+/*! Pixel 2 XL */
+@media only screen and (min-device-width: 411px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+}
+
+/*! Ipad */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+}
+
+/*! iPad Pro */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+}
+
+/*! Laptops */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+}

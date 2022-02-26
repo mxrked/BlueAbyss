@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap");
+.white_overlay {
+  position: fixed;
+  width: 100%;
+  height: 110%;
+  background-color: white;
+  z-index: 999;
+}
+
+.page_loader {
+  position: fixed;
+  width: 100%;
+  height: 110%;
+  display: none;
+  place-items: center;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: white;
+}
+
+.page_loader .page_loader_cnt {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.page_loader .page_loader_cnt h1 {
+  font-family: "Poppins";
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #276678;
+  font-size: clamp(3rem, 4vw, 4rem);
+  padding-bottom: 30px !important;
+}
+
+.page_loader .page_loader_cnt .page_loader_spinner_holder {
+  text-align: center;
+}
+
+.page_loader .page_loader_cnt .page_loader_spinner_holder div {
+  margin: auto !important;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 9px solid rgba(0, 0, 255, 0.089);
+  -webkit-animation: spinner 1.2s linear infinite;
+          animation: spinner 1.2s linear infinite;
+}
+
+.page_loader .page_loader_cnt .page_loader_spinner_holder div span {
+  width: 10px;
+  height: 10px;
+  border-radius: 20%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  background-color: #254c57;
+  display: block;
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.back_to_top {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  bottom: 30px;
+  right: 30px;
+  z-index: 200;
+  background-color: #1687a7;
+  color: white;
+  border-radius: 50%;
+  border: 1px solid rgba(245, 245, 245, 0.212);
+  outline: none;
+  font-size: 25px;
+}
+
+.back_to_top:hover {
+  background-color: #276678;
+}
+
+@media all and (max-width: 1995px) {
+  .back_to_top {
+    font-size: 20px;
+    width: 45px;
+    height: 45px;
+    right: 17px;
+  }
+}
+
+/*! Pixel 2 XL */
+/*! Ipad */
+/*! iPad Pro */
+/*! Laptops */
+/*# sourceMappingURL=JS.module.css.map */

@@ -1,0 +1,1444 @@
+@import "../../colors/Colors.scss";
+@import "../../fonts/Fonts.scss";
+@import "../../mixins/Mixins.scss";
+
+//! Non Responsive
+#galleriesBody {
+  //? Top
+  #top {
+    width: 100%;
+
+    .top_bg {
+      position: relative;
+      height: 100vh;
+
+      &::before {
+        background-image: url("http://basicallyeasy.com/NextJSCDNS/blueabyss/galleries/index/top/galleries-index-top.webp");
+        @include bGSU;
+        content: "";
+        height: 100%;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        will-change: transform !important;
+        z-index: -1;
+      }
+
+      .top_bg_cnt {
+        text-align: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.75);
+        @include tLC;
+        z-index: 100;
+        font-family: $P;
+
+        div {
+          padding-top: 70px !important;
+          width: 100%;
+          color: white;
+          filter: drop-shadow(0 2px 12px rgb(0, 0, 0));
+          h1 {
+            font-size: clamp(11rem, 11vw, 11rem);
+            font-weight: $Headings;
+            line-height: 140px;
+            text-transform: uppercase;
+          }
+
+          p {
+            font-size: clamp(26px, 17px, 17px);
+            font-weight: $Text;
+            padding-top: 20px !important;
+            padding-bottom: 20px !important;
+          }
+        }
+      }
+    }
+  }
+
+  //? Galleries
+  #galleries {
+    background-color: rgb(245, 245, 245);
+    padding-top: 120px !important;
+    padding-bottom: 120px !important;
+
+    .galleries_cnt {
+      max-width: 1500px;
+      width: 100%;
+      @include qC;
+      overflow: hidden;
+
+      .gallery {
+        height: 400px;
+        position: relative;
+        margin: 20px !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        overflow: hidden;
+
+        &:hover {
+          .gallery_bg {
+            transform: scale(1.02);
+          }
+
+          a {
+            background-color: rgba(0, 0, 0, 0.75);
+          }
+        }
+
+        .gallery_bg {
+          @include bGSU;
+        }
+
+        a {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.65);
+          @include tLC;
+          font-family: $P;
+          text-align: center;
+          text-decoration: none;
+          color: white;
+
+          div {
+            span {
+              font-weight: $SubHeadings;
+              text-transform: uppercase;
+              filter: drop-shadow(0 2px 12px rgb(0, 0, 0));
+              font-size: clamp(4rem, 5vw, 5rem);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#aquaticBody,
+#cephalopodBody,
+#crustaceanBody,
+#mammalBody {
+  position: relative;
+  //? Top
+  #top {
+    width: 100%;
+
+    .top_bg {
+      position: relative;
+      height: 100vh;
+
+      &::before {
+        @include bGSU;
+        content: "";
+        height: 100%;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        will-change: transform !important;
+        z-index: -1;
+      }
+
+      .top_bg_cnt {
+        text-align: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.75);
+        @include tLC;
+        z-index: 100;
+        font-family: $P;
+
+        div {
+          padding-top: 90px !important;
+          width: 100%;
+          color: white;
+          filter: drop-shadow(0 2px 12px rgb(0, 0, 0));
+          h1 {
+            font-size: clamp(11rem, 11vw, 11rem);
+            font-weight: $Headings;
+            line-height: 160px;
+            text-transform: uppercase;
+          }
+
+          p {
+            font-size: clamp(26px, 17px, 17px);
+            font-weight: $Text;
+            padding-top: 20px !important;
+            padding-bottom: 20px !important;
+          }
+        }
+      }
+    }
+  }
+
+  //? Togglers
+  #togglers {
+    background-color: rgb(245, 245, 245);
+    padding-top: 120px !important;
+    padding-bottom: 120px !important;
+
+    .togglers_box {
+      max-width: 1500px;
+      width: 100%;
+      @include qC;
+      overflow: hidden;
+
+      .togglers_row {
+        .modal_toggler {
+          height: 400px;
+          position: relative;
+          border: 4px solid rgb(245, 245, 245);
+
+          .modal_toggler_bg {
+            @include bGSU;
+          }
+
+          .modal_toggler_btn {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.65);
+            width: 100%;
+            height: 100%;
+            @include tLC;
+            outline: none;
+            border: none;
+            font-family: $P;
+
+            &:hover {
+              background-color: rgba(0, 0, 0, 0.75);
+
+              span {
+                background-color: white;
+                color: $BlueDianne;
+              }
+            }
+
+            span {
+              font-weight: $SubHeadings;
+              color: white;
+              border: 4px solid white;
+              padding: 10px !important;
+              text-transform: uppercase;
+              font-size: 23px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //? Modals
+  #modals {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.774);
+    z-index: 600;
+    display: none;
+
+    .modal {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 700;
+      display: none;
+      place-items: center;
+
+      .modal_cnt {
+        width: 100%;
+        text-align: center;
+
+        button {
+          font-weight: $SubHeadings;
+          background-color: transparent;
+          color: white;
+          border: 4px solid white;
+          padding: 10px !important;
+          text-transform: uppercase;
+          font-size: 23px;
+
+          &:hover {
+            background-color: white;
+            color: $BlueDianne;
+          }
+        }
+
+        .modal_bg_holder {
+          @include qC;
+          width: 100%;
+          height: 700px;
+          max-width: 1000px;
+          overflow: hidden;
+          margin-top: 50px !important;
+
+          .modal_bg {
+            @include bGSU;
+          }
+        }
+      }
+    }
+  }
+}
+
+#aquaticBody {
+  #top {
+    .top_bg {
+      &::before {
+        background-image: url("http://basicallyeasy.com/NextJSCDNS/blueabyss/index/galleries/aquatic/aquatic.webp");
+      }
+    }
+  }
+}
+
+#cephalopodBody {
+  #top {
+    .top_bg {
+      &::before {
+        background-image: url("http://basicallyeasy.com/NextJSCDNS/blueabyss/index/galleries/cephalopod/cephalopod.webp");
+      }
+    }
+  }
+}
+
+#crustaceanBody {
+  #top {
+    .top_bg {
+      &::before {
+        background-image: url("http://basicallyeasy.com/NextJSCDNS/blueabyss/index/galleries/crustacean/crustacean.webp");
+      }
+    }
+  }
+}
+
+#mammalBody {
+  #top {
+    .top_bg {
+      &::before {
+        background-image: url("http://basicallyeasy.com/NextJSCDNS/blueabyss/index/galleries/mammal/mammal.webp");
+      }
+    }
+  }
+}
+
+//! Responsive
+@media all and (max-width: 1995px) {
+  #galleriesBody {
+    //? Top
+    #top {
+      .top_bg {
+        height: 100vh;
+
+        .top_bg_cnt {
+          div {
+            h1 {
+              font-size: 130px;
+              line-height: 110px;
+            }
+          }
+        }
+      }
+    }
+
+    //? Galleries
+    #galleries {
+      padding-top: 50px !important;
+      padding-bottom: 50px !important;
+      .galleries_cnt {
+        max-width: 90%;
+      }
+    }
+  }
+
+  #aquaticBody,
+  #cephalopodBody,
+  #crustaceanBody,
+  #mammalBody {
+    //? Top
+    #top {
+      .top_bg {
+        height: 100vh;
+
+        .top_bg_cnt {
+          div {
+            h1 {
+              font-size: 130px;
+              line-height: 120px;
+            }
+          }
+        }
+      }
+    }
+
+    //? Togglers
+    #togglers {
+      padding-top: 50px !important;
+      padding-bottom: 50px !important;
+
+      .togglers_box {
+        max-width: 93.5%;
+      }
+    }
+
+    //? Modals
+    #modals {
+      .modal {
+        .modal_cnt {
+          .modal_bg_holder {
+            max-width: 90%;
+            height: 900px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 991px) {
+  #galleriesBody {
+    //? Top
+    #top {
+      .top_bg {
+        height: 100vh;
+
+        &::before {
+          position: absolute;
+        }
+
+        .top_bg_cnt {
+          div {
+            h1 {
+              font-size: 100px;
+              line-height: 80px;
+            }
+
+            p {
+              font-size: 23px;
+            }
+          }
+        }
+      }
+    }
+
+    //? Galleries
+    #galleries {
+      padding-top: 20px !important;
+      padding-bottom: 20px !important;
+      .galleries_cnt {
+        max-width: 97%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        .gallery {
+          max-width: 49%;
+          width: 100%;
+          height: 350px;
+          margin-top: 2px !important;
+          margin-bottom: 2px !important;
+
+          a {
+            div {
+              span {
+                font-size: 45px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #aquaticBody,
+  #cephalopodBody,
+  #crustaceanBody,
+  #mammalBody {
+    //? Top
+    #top {
+      .top_bg {
+        height: 100vh;
+
+        &::before {
+          position: absolute;
+        }
+
+        .top_bg_cnt {
+          div {
+            h1 {
+              font-size: 100px;
+              line-height: 100px;
+            }
+
+            p {
+              font-size: 23px;
+            }
+          }
+        }
+      }
+    }
+
+    //? Togglers
+    #togglers {
+      padding-top: 20px !important;
+      padding-bottom: 20px !important;
+
+      .togglers_box {
+        max-width: 96.5%;
+
+        .togglers_row {
+          .modal_toggler {
+            height: 350px;
+
+            .modal_toggler_btn {
+              span {
+                font-size: 21px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //? Modals
+    #modals {
+      .modal {
+        .modal_cnt {
+          .modal_bg_holder {
+            max-width: 700px;
+            height: 700px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+}
+
+@media all and (max-width: 768px) {
+  #galleriesBody {
+    //? Top
+    #top {
+      .top_bg {
+        height: 480px !important;
+
+        &::before {
+          position: absolute;
+        }
+
+        .top_bg_cnt {
+          div {
+            h1 {
+              font-size: 38px;
+              line-height: 30px;
+              padding: 10px !important;
+              padding-bottom: 5px !important;
+            }
+
+            p {
+              font-size: 17px;
+            }
+          }
+        }
+      }
+    }
+
+    //? Galleries
+    #galleries {
+      padding-top: 8px !important;
+      padding-bottom: 8px !important;
+      .galleries_cnt {
+        max-width: 95%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        .gallery {
+          max-width: 100%;
+          width: 100%;
+          height: 150px;
+          margin-top: 0px !important;
+          margin-bottom: 0px !important;
+
+          a {
+            div {
+              span {
+                font-size: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #aquaticBody,
+  #cephalopodBody,
+  #crustaceanBody,
+  #mammalBody {
+    //? Top
+    #top {
+      .top_bg {
+        height: 480px !important;
+
+        &::before {
+          position: absolute;
+        }
+
+        .top_bg_cnt {
+          div {
+            h1 {
+              font-size: 38px;
+              line-height: 40px;
+              padding: 10px !important;
+              padding-bottom: 5px !important;
+            }
+
+            p {
+              font-size: 17px;
+              max-width: 300px;
+              @include qC;
+            }
+          }
+        }
+      }
+    }
+
+    //? Togglers
+    #togglers {
+      padding-top: 7px !important;
+      padding-bottom: 7px !important;
+
+      .togglers_box {
+        max-width: 98%;
+
+        .togglers_row {
+          .modal_toggler {
+            margin: 2px !important;
+            max-width: 100%;
+            border: none;
+            width: 100%;
+            height: 210px;
+
+            .modal_toggler_btn {
+              span {
+                font-size: 21px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //? Modals
+    #modals {
+      .modal {
+        .modal_cnt {
+          button {
+            font-size: 17px;
+            border-width: 2px;
+          }
+
+          .modal_bg_holder {
+            margin-top: 20px !important;
+            max-width: 95%;
+            height: 270px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*! Pixel 2 XL */
+@media only screen and (min-device-width: 411px) and (max-device-width: 823px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  #galleriesBody {
+    //? Top
+    #top {
+      .top_bg {
+        height: 350px !important;
+
+        &::before {
+          position: absolute;
+        }
+
+        .top_bg_cnt {
+          div {
+            padding-top: 50px !important;
+            h1 {
+              font-size: 35px;
+              line-height: 30px;
+            }
+
+            p {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+
+    //? Galleries
+    #galleries {
+      padding-top: 6px !important;
+      padding-bottom: 6px !important;
+      .galleries_cnt {
+        max-width: 98%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        .gallery {
+          max-width: 50%;
+          width: 100%;
+          height: 150px;
+          margin-top: 0px !important;
+          margin-bottom: 0px !important;
+
+          a {
+            div {
+              span {
+                font-size: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #aquaticBody,
+  #cephalopodBody,
+  #crustaceanBody,
+  #mammalBody {
+    //? Top
+    #top {
+      .top_bg {
+        height: 350px !important;
+
+        &::before {
+          position: absolute;
+        }
+
+        .top_bg_cnt {
+          div {
+            padding-top: 70px !important;
+            h1 {
+              font-size: 35px;
+              line-height: 30px;
+            }
+
+            p {
+              padding-top: 10px !important;
+              font-size: 15px;
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    //? Togglers
+    #togglers {
+      padding-top: 7px !important;
+      padding-bottom: 7px !important;
+
+      .togglers_box {
+        max-width: 98%;
+
+        .togglers_row {
+          .modal_toggler {
+            margin: 2px !important;
+            max-width: 100%;
+            border: none;
+            width: 100%;
+            height: 210px;
+
+            .modal_toggler_btn {
+              span {
+                font-size: 21px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //? Modals
+    #modals {
+      .modal {
+        .modal_cnt {
+          button {
+            font-size: 14px;
+            border-width: 2px;
+            padding: 6px !important;
+          }
+
+          .modal_bg_holder {
+            margin-top: 10px !important;
+            max-width: 60%;
+            height: 230px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*! Ipad */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+  #galleriesBody {
+    //? Top
+    #top {
+      .top_bg {
+        height: 1050px !important;
+
+        &::before {
+          position: absolute;
+        }
+
+        .top_bg_cnt {
+          div {
+            padding-top: 30px !important;
+            h1 {
+              font-size: 75px;
+              line-height: 70px;
+            }
+
+            p {
+              font-size: 23px;
+            }
+          }
+        }
+      }
+    }
+
+    //? Galleries
+    #galleries {
+      padding-top: 20px !important;
+      padding-bottom: 20px !important;
+      .galleries_cnt {
+        max-width: 97%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        .gallery {
+          max-width: 49%;
+          width: 100%;
+          height: 250px;
+          margin-top: 2px !important;
+          margin-bottom: 2px !important;
+
+          a {
+            div {
+              span {
+                font-size: 35px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #aquaticBody,
+  #cephalopodBody,
+  #crustaceanBody,
+  #mammalBody {
+    //? Top
+    #top {
+      .top_bg {
+        height: 1050px !important;
+
+        &::before {
+          position: absolute;
+        }
+
+        .top_bg_cnt {
+          div {
+            padding-top: 30px !important;
+            h1 {
+              font-size: 75px;
+              line-height: 70px;
+            }
+
+            p {
+              font-size: 23px;
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    //? Togglers
+    #togglers {
+      padding-top: 7px !important;
+      padding-bottom: 7px !important;
+
+      .togglers_box {
+        max-width: 98%;
+
+        .togglers_row {
+          .modal_toggler {
+            margin: 0px !important;
+            max-width: 50%;
+            border: 2px solid rgb(245, 245, 245);
+            width: 100%;
+            height: 320px;
+
+            .modal_toggler_btn {
+              span {
+                font-size: 21px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //? Modals
+    #modals {
+      .modal {
+        .modal_cnt {
+          button {
+            font-size: 21px;
+            border-width: 4px;
+            padding: 6px !important;
+          }
+
+          .modal_bg_holder {
+            margin-top: 20px !important;
+            max-width: 80%;
+            height: 430px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+  #galleriesBody {
+    //? Top
+    #top {
+      .top_bg {
+        height: 480px !important;
+
+        &::before {
+          position: absolute;
+        }
+
+        .top_bg_cnt {
+          div {
+            h1 {
+              font-size: 55px;
+              line-height: 50px;
+            }
+
+            p {
+              font-size: 19px;
+            }
+          }
+        }
+      }
+    }
+
+    //? Galleries
+    #galleries {
+      padding-top: 20px !important;
+      padding-bottom: 20px !important;
+      .galleries_cnt {
+        max-width: 97%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        .gallery {
+          max-width: 49%;
+          width: 100%;
+          height: 200px;
+          margin-top: 2px !important;
+          margin-bottom: 2px !important;
+
+          a {
+            div {
+              span {
+                font-size: 35px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #aquaticBody,
+  #cephalopodBody,
+  #crustaceanBody,
+  #mammalBody {
+    //? Top
+    #top {
+      .top_bg {
+        height: 480px !important;
+
+        &::before {
+          position: absolute;
+        }
+
+        .top_bg_cnt {
+          div {
+            h1 {
+              font-size: 55px;
+              line-height: 50px;
+            }
+
+            p {
+              max-width: 100%;
+              font-size: 19px;
+            }
+          }
+        }
+      }
+    }
+
+    //? Togglers
+    #togglers {
+      padding-top: 7px !important;
+      padding-bottom: 7px !important;
+
+      .togglers_box {
+        max-width: 98%;
+
+        .togglers_row {
+          .modal_toggler {
+            margin: 0px !important;
+            max-width: 50%;
+            border: 2px solid rgb(245, 245, 245);
+            width: 100%;
+            height: 230px;
+
+            .modal_toggler_btn {
+              span {
+                font-size: 21px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //? Modals
+    #modals {
+      .modal {
+        .modal_cnt {
+          button {
+            font-size: 14px;
+            border-width: 2px;
+            padding: 6px !important;
+          }
+
+          .modal_bg_holder {
+            margin-top: 10px !important;
+            max-width: 60%;
+            height: 230px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*! iPad Pro */
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  #galleriesBody {
+    //? Top
+    #top {
+      .top_bg {
+        height: 1280px !important;
+
+        &::before {
+          position: absolute;
+        }
+
+        .top_bg_cnt {
+          div {
+            h1 {
+              font-size: 115px;
+              line-height: 100px;
+            }
+
+            p {
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+
+    //? Galleries
+    #galleries {
+      padding-top: 20px !important;
+      padding-bottom: 20px !important;
+      .galleries_cnt {
+        max-width: 97%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        .gallery {
+          max-width: 49%;
+          width: 100%;
+          height: 320px;
+          margin-top: 2px !important;
+          margin-bottom: 2px !important;
+
+          a {
+            div {
+              span {
+                font-size: 50px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #aquaticBody,
+  #cephalopodBody,
+  #crustaceanBody,
+  #mammalBody {
+    //? Top
+    #top {
+      .top_bg {
+        height: 1280px !important;
+
+        &::before {
+          position: absolute;
+        }
+
+        .top_bg_cnt {
+          div {
+            h1 {
+              font-size: 115px;
+              line-height: 110px;
+            }
+
+            p {
+              max-width: 100%;
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+
+    //? Togglers
+    #togglers {
+      padding-top: 35px !important;
+      padding-bottom: 35px !important;
+
+      .togglers_box {
+        max-width: 94%;
+
+        .togglers_row {
+          .modal_toggler {
+            margin: 0px !important;
+            max-width: 50%;
+            border: 2px solid rgb(245, 245, 245);
+            width: 100%;
+            height: 310px;
+
+            .modal_toggler_btn {
+              span {
+                font-size: 23px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //? Modals
+    #modals {
+      .modal {
+        .modal_cnt {
+          button {
+            font-size: 23px;
+            border-width: 4px;
+            padding: 10px !important;
+          }
+
+          .modal_bg_holder {
+            margin-top: 20px !important;
+            max-width: 60%;
+            height: 530px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  #galleriesBody {
+    //? Top
+    #top {
+      .top_bg {
+        height: 580px !important;
+
+        &::before {
+          position: absolute;
+        }
+
+        .top_bg_cnt {
+          div {
+            h1 {
+              font-size: 65px;
+              line-height: 60px;
+            }
+
+            p {
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+
+    //? Galleries
+    #galleries {
+      padding-top: 20px !important;
+      padding-bottom: 20px !important;
+      .galleries_cnt {
+        max-width: 97.8%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        .gallery {
+          max-width: 49%;
+          width: 100%;
+          height: 320px;
+          margin-top: 2px !important;
+          margin-bottom: 2px !important;
+
+          a {
+            div {
+              span {
+                font-size: 50px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #aquaticBody,
+  #cephalopodBody,
+  #crustaceanBody,
+  #mammalBody {
+    //? Top
+    #top {
+      .top_bg {
+        height: 580px !important;
+
+        &::before {
+          position: absolute;
+        }
+
+        .top_bg_cnt {
+          div {
+            h1 {
+              font-size: 65px;
+              line-height: 60px;
+            }
+
+            p {
+              max-width: 100%;
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+    //? Togglers
+    #togglers {
+      padding-top: 35px !important;
+      padding-bottom: 35px !important;
+
+      .togglers_box {
+        max-width: 94%;
+
+        .togglers_row {
+          .modal_toggler {
+            margin: 0px !important;
+            max-width: 50%;
+            border: 2px solid rgb(245, 245, 245);
+            width: 100%;
+            height: 310px;
+
+            .modal_toggler_btn {
+              span {
+                font-size: 23px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //? Modals
+    #modals {
+      .modal {
+        .modal_cnt {
+          button {
+            font-size: 23px;
+            border-width: 4px;
+            padding: 10px !important;
+          }
+
+          .modal_bg_holder {
+            margin-top: 20px !important;
+            max-width: 60%;
+            height: 530px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*! Laptops */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  #galleriesBody {
+    //? Top
+    #top {
+      .top_bg {
+        height: 830px !important;
+
+        .top_bg_cnt {
+          div {
+            h1 {
+              font-size: 85px;
+              line-height: 80px;
+            }
+
+            p {
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+
+    //? Galleries
+    #galleries {
+      padding-top: 40px !important;
+      padding-bottom: 40px !important;
+      .galleries_cnt {
+        max-width: 95.8%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        .gallery {
+          max-width: 49%;
+          width: 100%;
+          height: 320px;
+          margin-top: 2px !important;
+          margin-bottom: 2px !important;
+
+          a {
+            div {
+              span {
+                font-size: 60px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #aquaticBody,
+  #cephalopodBody,
+  #crustaceanBody,
+  #mammalBody {
+    //? Top
+    #top {
+      .top_bg {
+        height: 830px !important;
+
+        .top_bg_cnt {
+          div {
+            h1 {
+              font-size: 85px;
+              line-height: 80px;
+            }
+
+            p {
+              max-width: 100%;
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+
+    //? Togglers
+    #togglers {
+      padding-top: 65px !important;
+      padding-bottom: 65px !important;
+
+      .togglers_box {
+        max-width: 94%;
+
+        .togglers_row {
+          .modal_toggler {
+            margin: 0px !important;
+            max-width: 50%;
+            border: 2px solid rgb(245, 245, 245);
+            width: 100%;
+            height: 350px;
+
+            .modal_toggler_btn {
+              span {
+                font-size: 23px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //? Modals
+    #modals {
+      .modal {
+        .modal_cnt {
+          button {
+            font-size: 23px;
+            border-width: 4px;
+            padding: 10px !important;
+          }
+
+          .modal_bg_holder {
+            margin-top: 20px !important;
+            max-width: 60%;
+            height: 530px;
+          }
+        }
+      }
+    }
+  }
+}

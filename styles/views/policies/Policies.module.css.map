@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AEAA,OAAO,CAAC,yFAAI;AFmBZ,iBAAiB;AAIjB,WAAW;AAOX,eAAe;AAOf,cAAc",
+    "sources": [
+        "Policies.module.scss",
+        "../../colors/Colors.scss",
+        "../../fonts/Fonts.scss",
+        "../../mixins/Mixins.scss"
+    ],
+    "names": [],
+    "file": "Policies.module.css"
+}

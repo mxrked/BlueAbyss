@@ -1,0 +1,74 @@
+// Fonts
+
+// Imports
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap');
+
+// Pages
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+
+// Colors
+$Botticelli: #d3e0ea;
+$Calypso: #276678;
+$EasternBlue: #1687a7;
+$WildSand: #f6f5f5;
+$BlueDianne: #254C57;
+
+
+// Resets 
+.deactive {
+opacity: 0;
+visibility: hidden;
+}
+
+.page-transition {
+transition: .3s ease-in-out;
+}
+
+.full-second {
+transition: 1s ease-in-out;
+}
+
+.blur-up {
+-webkit-filter: blur(5px);
+filter: blur(5px);
+transition: filter 3000ms 500ms, -webkit-filter 3000ms 500ms;
+}
+.blur-up.lazyloaded {
+-webkit-filter: blur(0);
+filter: blur(0);
+}
+
+// Mixins
+@mixin bGSU() {
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+@mixin tLC() {
+display: grid;
+place-items: center;
+}
+
+@mixin qC() {
+margin: auto !important;
+}
+
+
+
+// next.config.js
+const isProd = process.env.NODE_ENV === "production";
+
+module.exports = {
+  reactStrictMode: true,
+
+  //! This added clean urls and eliminates the .html extension aswell as linking
+  //! CSS and JS with the trailingSlash
+  assetPrefix: isProd
+    ? "http://basicallyeasy.com/next-projects/blueabyss"
+    : "",
+  trailingSlash: true,
+};

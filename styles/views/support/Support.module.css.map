@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AEAA,OAAO,CAAC,yFAAI;AFmBZ,iBAAiB;AAIjB,WAAW;AAOX,eAAe;AAOf,cAAc",
+    "sources": [
+        "Support.module.scss",
+        "../../colors/Colors.scss",
+        "../../fonts/Fonts.scss",
+        "../../mixins/Mixins.scss"
+    ],
+    "names": [],
+    "file": "Support.module.css"
+}
